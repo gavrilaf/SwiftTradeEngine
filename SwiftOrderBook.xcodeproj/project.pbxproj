@@ -7,256 +7,489 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		469DA46C1EA0138A007F97A2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DA46B1EA0138A007F97A2 /* main.swift */; };
+		OBJ_31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
+		OBJ_33 /* OrderBookLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* OrderBookLib.framework */; };
+		OBJ_40 /* OrderBookProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* OrderBookProtocol.swift */; };
+		OBJ_41 /* TradeEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TradeEngineProtocol.swift */; };
+		OBJ_42 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Order.swift */; };
+		OBJ_43 /* TradeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* TradeEvent.swift */; };
+		OBJ_44 /* HeapBasedOrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* HeapBasedOrderBook.swift */; };
+		OBJ_51 /* HeapOrderBookSimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* HeapOrderBookSimpleTests.swift */; };
+		OBJ_53 /* OrderBookLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* OrderBookLib.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		469DA4661EA0138A007F97A2 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
+/* Begin PBXContainerItemProxy section */
+		46388FA71EA3EDFE00B2C4DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_35;
+			remoteInfo = OrderBookLib;
 		};
-/* End PBXCopyFilesBuildPhase section */
+		46388FA81EA3EDFE00B2C4DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_35;
+			remoteInfo = OrderBookLib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		469DA4681EA0138A007F97A2 /* SwiftOrderBook */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftOrderBook; sourceTree = BUILT_PRODUCTS_DIR; };
-		469DA46B1EA0138A007F97A2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_12 /* OrderBookProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookProtocol.swift; sourceTree = "<group>"; };
+		OBJ_13 /* TradeEngineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeEngineProtocol.swift; sourceTree = "<group>"; };
+		OBJ_15 /* HeapBasedOrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapBasedOrderBook.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		OBJ_18 /* TradeEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeEvent.swift; sourceTree = "<group>"; };
+		OBJ_21 /* HeapOrderBookSimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapOrderBookSimpleTests.swift; sourceTree = "<group>"; };
+		OBJ_23 /* OrderBookApp */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrderBookApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_24 /* OrderBookLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OrderBookLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_25 /* OrderBookLibTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = OrderBookLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		469DA4651EA0138A007F97A2 /* Frameworks */ = {
+		OBJ_32 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+				OBJ_33 /* OrderBookLib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_53 /* OrderBookLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		469DA45F1EA0138A007F97A2 = {
+		OBJ_10 /* OrderBookLib */ = {
 			isa = PBXGroup;
 			children = (
-				469DA46A1EA0138A007F97A2 /* SwiftOrderBook */,
-				469DA4691EA0138A007F97A2 /* Products */,
+				OBJ_11 /* Engine */,
+				OBJ_16 /* Types */,
 			);
+			name = OrderBookLib;
+			path = Sources/OrderBookLib;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_11 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* OrderBookProtocol.swift */,
+				OBJ_13 /* TradeEngineProtocol.swift */,
+				OBJ_14 /* OrderBook */,
+			);
+			path = Engine;
 			sourceTree = "<group>";
 		};
-		469DA4691EA0138A007F97A2 /* Products */ = {
+		OBJ_14 /* OrderBook */ = {
 			isa = PBXGroup;
 			children = (
-				469DA4681EA0138A007F97A2 /* SwiftOrderBook */,
+				OBJ_15 /* HeapBasedOrderBook.swift */,
+			);
+			path = OrderBook;
+			sourceTree = "<group>";
+		};
+		OBJ_16 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* Order.swift */,
+				OBJ_18 /* TradeEvent.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		OBJ_19 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* OrderBookLibTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_20 /* OrderBookLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* HeapOrderBookSimpleTests.swift */,
+			);
+			name = OrderBookLibTests;
+			path = Tests/OrderBookLibTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* OrderBookApp */,
+				OBJ_24 /* OrderBookLib.framework */,
+				OBJ_25 /* OrderBookLibTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		469DA46A1EA0138A007F97A2 /* SwiftOrderBook */ = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				469DA46B1EA0138A007F97A2 /* main.swift */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_19 /* Tests */,
+				OBJ_22 /* Products */,
 			);
-			path = SwiftOrderBook;
+			name = "";
 			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* OrderBookApp */,
+				OBJ_10 /* OrderBookLib */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* OrderBookApp */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* main.swift */,
+			);
+			name = OrderBookApp;
+			path = Sources/OrderBookApp;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		469DA4671EA0138A007F97A2 /* SwiftOrderBook */ = {
+		OBJ_26 /* OrderBookApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 469DA46F1EA0138A007F97A2 /* Build configuration list for PBXNativeTarget "SwiftOrderBook" */;
+			buildConfigurationList = OBJ_27 /* Build configuration list for PBXNativeTarget "OrderBookApp" */;
 			buildPhases = (
-				469DA4641EA0138A007F97A2 /* Sources */,
-				469DA4651EA0138A007F97A2 /* Frameworks */,
-				469DA4661EA0138A007F97A2 /* CopyFiles */,
+				OBJ_30 /* Sources */,
+				OBJ_32 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_34 /* PBXTargetDependency */,
+			);
+			name = OrderBookApp;
+			productName = OrderBookApp;
+			productReference = OBJ_23 /* OrderBookApp */;
+			productType = "com.apple.product-type.tool";
+		};
+		OBJ_35 /* OrderBookLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_36 /* Build configuration list for PBXNativeTarget "OrderBookLib" */;
+			buildPhases = (
+				OBJ_39 /* Sources */,
+				OBJ_45 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftOrderBook;
-			productName = SwiftOrderBook;
-			productReference = 469DA4681EA0138A007F97A2 /* SwiftOrderBook */;
-			productType = "com.apple.product-type.tool";
+			name = OrderBookLib;
+			productName = OrderBookLib;
+			productReference = OBJ_24 /* OrderBookLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		OBJ_46 /* OrderBookLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_47 /* Build configuration list for PBXNativeTarget "OrderBookLibTests" */;
+			buildPhases = (
+				OBJ_50 /* Sources */,
+				OBJ_52 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_54 /* PBXTargetDependency */,
+			);
+			name = OrderBookLibTests;
+			productName = OrderBookLibTests;
+			productReference = OBJ_25 /* OrderBookLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		469DA4601EA0138A007F97A2 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = gavrilaf;
-				TargetAttributes = {
-					469DA4671EA0138A007F97A2 = {
-						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 9L3EM8F93P;
-						ProvisioningStyle = Automatic;
-					};
-				};
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = 469DA4631EA0138A007F97A2 /* Build configuration list for PBXProject "SwiftOrderBook" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SwiftOrderBook" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 469DA45F1EA0138A007F97A2;
-			productRefGroup = 469DA4691EA0138A007F97A2 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				469DA4671EA0138A007F97A2 /* SwiftOrderBook */,
+				OBJ_26 /* OrderBookApp */,
+				OBJ_35 /* OrderBookLib */,
+				OBJ_46 /* OrderBookLibTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		469DA4641EA0138A007F97A2 /* Sources */ = {
+		OBJ_30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				469DA46C1EA0138A007F97A2 /* main.swift in Sources */,
+				OBJ_31 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_40 /* OrderBookProtocol.swift in Sources */,
+				OBJ_41 /* TradeEngineProtocol.swift in Sources */,
+				OBJ_42 /* Order.swift in Sources */,
+				OBJ_43 /* TradeEvent.swift in Sources */,
+				OBJ_44 /* HeapBasedOrderBook.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_51 /* HeapOrderBookSimpleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		OBJ_34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_35 /* OrderBookLib */;
+			targetProxy = 46388FA71EA3EDFE00B2C4DC /* PBXContainerItemProxy */;
+		};
+		OBJ_54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_35 /* OrderBookLib */;
+			targetProxy = 46388FA81EA3EDFE00B2C4DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		469DA46D1EA0138A007F97A2 /* Debug */ = {
+		OBJ_28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookApp_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				TARGET_NAME = OrderBookApp;
 			};
 			name = Debug;
 		};
-		469DA46E1EA0138A007F97A2 /* Release */ = {
+		OBJ_29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookApp_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				TARGET_NAME = OrderBookApp;
 			};
 			name = Release;
 		};
-		469DA4701EA0138A007F97A2 /* Debug */ = {
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 9L3EM8F93P;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		469DA4711EA0138A007F97A2 /* Release */ = {
+		OBJ_37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 9L3EM8F93P;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookLib_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = OrderBookLib;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = OrderBookLib;
+			};
+			name = Debug;
+		};
+		OBJ_38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookLib_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = OrderBookLib;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGET_NAME = OrderBookLib;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookLibTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = OrderBookLibTests;
+			};
+			name = Debug;
+		};
+		OBJ_49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookLibTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = OrderBookLibTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		469DA4631EA0138A007F97A2 /* Build configuration list for PBXProject "SwiftOrderBook" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "SwiftOrderBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				469DA46D1EA0138A007F97A2 /* Debug */,
-				469DA46E1EA0138A007F97A2 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		469DA46F1EA0138A007F97A2 /* Build configuration list for PBXNativeTarget "SwiftOrderBook" */ = {
+		OBJ_27 /* Build configuration list for PBXNativeTarget "OrderBookApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				469DA4701EA0138A007F97A2 /* Debug */,
-				469DA4711EA0138A007F97A2 /* Release */,
+				OBJ_28 /* Debug */,
+				OBJ_29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_36 /* Build configuration list for PBXNativeTarget "OrderBookLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_37 /* Debug */,
+				OBJ_38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_47 /* Build configuration list for PBXNativeTarget "OrderBookLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_48 /* Debug */,
+				OBJ_49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 469DA4601EA0138A007F97A2 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
