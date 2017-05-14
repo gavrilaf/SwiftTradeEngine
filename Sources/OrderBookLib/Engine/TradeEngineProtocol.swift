@@ -10,7 +10,7 @@ import Foundation
 
 protocol TradeEngineProtocol {
     
-    var delegate: TradeObserverProtocol { get set }
+    var tradeHandler: TradeHandler? { get set }
     
     func createMarketOrder(side: OrderSide, symbol: String, trader: String, shares: Quantity) -> Order
     func createLimitOrder(side: OrderSide, symbol: String, trader: String, price: Money, shares: Quantity) -> Order
@@ -18,6 +18,6 @@ protocol TradeEngineProtocol {
     func add(order: Order)
     func cancel(orderById id: OrderID)
     
-    func askMin(forSymbol symbol: String)
-    func bidMax(forSymbol symbol: String)
+    func sellMin(forSymbol symbol: String) -> Money?
+    func buyMax(forSymbol symbol: String) -> Money?
 }

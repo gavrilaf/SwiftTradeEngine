@@ -1,0 +1,12 @@
+{
+  "autoPin": true,
+  "pins": [
+    {
+      "package": "BTree",
+      "reason": null,
+      "repositoryURL": "https://github.com/lorentey/BTree",
+      "version": "4.0.2"
+    }
+  ],
+  "version": 1
+}

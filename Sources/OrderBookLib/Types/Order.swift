@@ -8,25 +8,25 @@
 
 import Foundation
 
-typealias OrderID = UInt64
+public typealias OrderID = UInt64
 
-typealias Money = UInt64
-typealias Quantity = UInt64
+public typealias Money = UInt64
+public typealias Quantity = UInt64
 
-typealias OBString = String
+public typealias OBString = String
 
-enum OrderType {
+public enum OrderType {
     case limit
     case market
 }
 
-enum OrderSide {
-    case bid
-    case ask
+public enum OrderSide {
+    case sell
+    case buy
 }
 
 
-struct Order {
+public struct Order {
     let id: OrderID
     let type: OrderType
     let side: OrderSide

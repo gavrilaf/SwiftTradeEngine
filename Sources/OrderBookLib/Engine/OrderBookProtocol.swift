@@ -8,19 +8,17 @@
 
 import Foundation
 
-protocol TradeObserverProtocol: class {
-    func handle(tradeEvent: TradeEvent)
-}
+typealias TradeHandler = (TradeEvent) -> Void
 
 protocol OrderBookProtocol {
     
-    weak var delegate: TradeObserverProtocol? { get set }
+    var tradeHandler: TradeHandler? { get set }
     
     func add(order: Order)
     func cancel(orderById id: OrderID)
     
-    var askMin: Money { get }
-    var bidMax: Money { get }
+    var topBuyOrder: Order? { get }
+    var topSellOrder: Order? { get }
 }
 
 protocol OrderBookFactory {
