@@ -27,6 +27,16 @@ public enum OrderSide {
 
 
 public struct Order {
+    public init(id: OrderID, type: OrderType, side: OrderSide, symbol: OBString, trader: OBString, price: Money, shares: Quantity) {
+        self.id     = id
+        self.type   = type
+        self.side   = side
+        self.symbol = symbol
+        self.trader = trader
+        self.price  = price
+        self.shares = shares
+    }
+    
     let id: OrderID
     let type: OrderType
     let side: OrderSide

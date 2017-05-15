@@ -1,28 +1,17 @@
+import Foundation
 import BTree
 import OrderBookLib
 
-print("Hello, world!")
+print("SwiftOrderBook score app")
 
-/*var buyBook = SortedSet<PricePoint>()
-buyBook.insert(PricePoint(side: .buy, price: 10))
-buyBook.insert(PricePoint(side: .buy, price: 12))
-buyBook.insert(PricePoint(side: .buy, price: 13))
-buyBook.insert(PricePoint(side: .buy, price: 178))
+let path = "/Users/eugenf/Documents/Projects/swift/SwiftOrderBook/Sources/OrderBookApp/OrdersFeed.json"
 
-var sellBook = SortedSet<PricePoint>()
-sellBook.insert(PricePoint(side: .sell, price: 10))
-sellBook.insert(PricePoint(side: .sell, price: 12))
-sellBook.insert(PricePoint(side: .sell, price: 13))
-sellBook.insert(PricePoint(side: .sell, price: 178))
+let executor = ScoresExecutor()
+executor.runTest(factory: BTreeBasedOrderBookFactory(), path: path)
 
 
 
-buyBook.forEach {
-    print($0)
-}
 
-print("************")
 
-sellBook.forEach {
-    print($0)
-}*/
+
+

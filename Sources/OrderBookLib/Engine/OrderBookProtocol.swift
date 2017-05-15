@@ -8,11 +8,13 @@
 
 import Foundation
 
-typealias TradeHandler = (TradeEvent) -> Void
+public typealias TradeHandler = (TradeEvent) -> Void
 
-protocol OrderBookProtocol {
+public protocol OrderBookProtocol {
     
     var tradeHandler: TradeHandler? { get set }
+    
+    func reset()
     
     func add(order: Order)
     func cancel(orderById id: OrderID)
@@ -21,6 +23,6 @@ protocol OrderBookProtocol {
     var topSellOrder: Order? { get }
 }
 
-protocol OrderBookFactory {
+public protocol OrderBookFactory {
     func createOrderBook() -> OrderBookProtocol
 }

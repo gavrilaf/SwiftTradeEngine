@@ -10,8 +10,10 @@ import Foundation
 import BTree
 
 
-struct BTreeBasedOrderBookFactory: OrderBookFactory {
-    func createOrderBook() -> OrderBookProtocol {
+public struct BTreeBasedOrderBookFactory: OrderBookFactory {
+    public init() {}
+    
+    public func createOrderBook() -> OrderBookProtocol {
         return BTreeBasedOrderBook()
     }
 }
@@ -20,6 +22,12 @@ struct BTreeBasedOrderBookFactory: OrderBookFactory {
 class BTreeBasedOrderBook: OrderBookProtocol {
     
     var tradeHandler: TradeHandler?
+    
+    func reset() {
+        sellBook.removeAll()
+        buyBook.removeAll()
+        prices.removeAll()
+    }
     
     func add(order: Order) {
         var copy = order // Create mutable copy
@@ -61,7 +69,7 @@ class BTreeBasedOrderBook: OrderBookProtocol {
     fileprivate var sellBook = SellOrderBook()
     fileprivate var buyBook = BuyOrderBook()
     
-    fileprivate var prices = Map<OrderID, (Money, OrderSide)>()
+    fileprivate var prices = Dictionary<OrderID, (Money, OrderSide)>()
 }
 
 extension BTreeBasedOrderBook {

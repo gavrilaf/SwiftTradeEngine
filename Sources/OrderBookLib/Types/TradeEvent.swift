@@ -28,6 +28,12 @@ public struct OrderExecutionInfo {
     }
 }
 
+extension OrderExecutionInfo: CustomStringConvertible {
+    public var description: String {
+        return "Trade(\(symbol), \(buyTrader), \(sellTrader), \(price), \(shares))"
+    }
+}
+
 extension OrderExecutionInfo: Equatable {}
 
 public func ==(lhs: OrderExecutionInfo, rhs: OrderExecutionInfo) -> Bool {
@@ -55,4 +61,18 @@ public func ==(lhs: TradeEvent, rhs: TradeEvent) -> Bool {
     default: return false
     }
 }
+
+extension TradeEvent: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .orderCancelled(let a):
+            return "cancelled(\(a))"
+        case .orderExecuted(let a):
+            return a.description
+        case .orderCompleted(let a):
+            return "completed(\(a))"
+        }
+    }
+}
+
 

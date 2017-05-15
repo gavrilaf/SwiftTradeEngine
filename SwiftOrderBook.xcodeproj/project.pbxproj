@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46D26BC71EC8B48700ACDF88 /* FeedOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D26BC61EC8B48700ACDF88 /* FeedOrder.swift */; };
+		461889A71EC97E9800185716 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461889A21EC97C6E00185716 /* FeedParser.swift */; };
+		461889B01ECA011400185716 /* ScoresExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461889AC1EC9FE1600185716 /* ScoresExecutor.swift */; };
+		461889B11ECA011800185716 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461889AE1ECA008300185716 /* Formatter.swift */; };
 		OBJ_100 /* BTreeOrderBookSimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* BTreeOrderBookSimpleTests.swift */; };
 		OBJ_102 /* BTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* BTree.framework */; };
 		OBJ_103 /* OrderBookLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* OrderBookLib.framework */; };
@@ -78,7 +80,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46D26BC61EC8B48700ACDF88 /* FeedOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedOrder.swift; sourceTree = "<group>"; };
+		461889A21EC97C6E00185716 /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
+		461889A41EC97D5400185716 /* OrdersFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OrdersFeed.json; sourceTree = "<group>"; };
+		461889A91EC986CE00185716 /* OrdersFeed2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OrdersFeed2.json; sourceTree = "<group>"; };
+		461889AC1EC9FE1600185716 /* ScoresExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresExecutor.swift; sourceTree = "<group>"; };
+		461889AE1ECA008300185716 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		OBJ_12 /* OrderBookProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookProtocol.swift; sourceTree = "<group>"; };
 		OBJ_13 /* TradeEngineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeEngineProtocol.swift; sourceTree = "<group>"; };
 		OBJ_15 /* BTreeBasedOrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeBasedOrderBook.swift; sourceTree = "<group>"; };
@@ -268,8 +274,12 @@
 		OBJ_8 /* OrderBookApp */ = {
 			isa = PBXGroup;
 			children = (
+				461889A41EC97D5400185716 /* OrdersFeed.json */,
+				461889A91EC986CE00185716 /* OrdersFeed2.json */,
 				OBJ_9 /* main.swift */,
-				46D26BC61EC8B48700ACDF88 /* FeedOrder.swift */,
+				461889A21EC97C6E00185716 /* FeedParser.swift */,
+				461889AC1EC9FE1600185716 /* ScoresExecutor.swift */,
+				461889AE1ECA008300185716 /* Formatter.swift */,
 			);
 			name = OrderBookApp;
 			path = Sources/OrderBookApp;
@@ -395,7 +405,6 @@
 				OBJ_64 /* Map.swift in Sources */,
 				OBJ_65 /* SortedBag.swift in Sources */,
 				OBJ_66 /* SortedSet.swift in Sources */,
-				46D26BC71EC8B48700ACDF88 /* FeedOrder.swift in Sources */,
 				OBJ_67 /* Weak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +413,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				461889A71EC97E9800185716 /* FeedParser.swift in Sources */,
+				461889B01ECA011400185716 /* ScoresExecutor.swift in Sources */,
+				461889B11ECA011800185716 /* Formatter.swift in Sources */,
 				OBJ_74 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
