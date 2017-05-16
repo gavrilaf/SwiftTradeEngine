@@ -9,6 +9,6 @@ let package = Package(
         Target(name: "OrderBookApp", dependencies: ["OrderBookLib"])
     ],
     dependencies: [
-        .Package(url: "https://github.com/lorentey/BTree", "4.0.2"),
+        //.Package(url: "https://github.com/lorentey/BTree", "4.0.2"),
     ]
 )
