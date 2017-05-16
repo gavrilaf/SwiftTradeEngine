@@ -97,14 +97,15 @@ extension BTreeBasedOrderBook {
                     
                     if pointOrders.isEmpty {
                         cursor.remove()
-                        if !cursor.isAtEnd {
-                            buyMax = cursor.key.amount
-                        } else {
-                            buyMax = 0
-                        }
                     } else {
                         break
                     }
+                }
+                
+                if !cursor.isAtEnd {
+                    buyMax = cursor.key.amount
+                } else {
+                    buyMax = 0
                 }
             }
         }
@@ -149,14 +150,15 @@ extension BTreeBasedOrderBook {
                 
                     if pointOrders.isEmpty {
                         cursor.remove()
-                        if !cursor.isAtEnd {
-                            sellMin = cursor.key.amount
-                        } else {
-                            sellMin = UInt64.max
-                        }
                     } else {
                         break
                     }
+                }
+                
+                if !cursor.isAtEnd {
+                    sellMin = cursor.key.amount
+                } else {
+                    sellMin = UInt64.max
                 }
             }
         }
