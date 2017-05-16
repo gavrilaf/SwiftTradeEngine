@@ -74,7 +74,7 @@ struct ScoresExecutor {
         
         let mean = Double(total) / Double(latencies.count)
         let sqtotal = latencies.reduce(0.0) { (res, t) -> Double in
-            var centered = Double(t) - mean
+            let centered = Double(t) - mean
             return res + (centered * centered) / Double(latencies.count)
         }
         

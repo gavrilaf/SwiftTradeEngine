@@ -9,7 +9,6 @@
 import Foundation
 import BTree
 
-
 public struct BTreeBasedOrderBookFactory: OrderBookFactory {
     public init() {}
     
@@ -17,7 +16,6 @@ public struct BTreeBasedOrderBookFactory: OrderBookFactory {
         return BTreeBasedOrderBook()
     }
 }
-
 
 class BTreeBasedOrderBook: OrderBookProtocol {
     
@@ -62,12 +60,15 @@ class BTreeBasedOrderBook: OrderBookProtocol {
         return buyBook.first?.1.first
     }
     
-    typealias OrdersList = Array<Order>
+    typealias OrdersList = FastDeque<Order>
     typealias BuyOrderBook = BTree<BuyPricePoint, OrdersList>
     typealias SellOrderBook = BTree<SellPricePoint, OrdersList>
     
     fileprivate var sellBook = SellOrderBook()
     fileprivate var buyBook = BuyOrderBook()
+    
+    fileprivate var sellMin: UInt64 = UInt64.max
+    fileprivate var buyMax: UInt64 = 0
     
     fileprivate var prices = Dictionary<OrderID, (Money, OrderSide)>()
 }
@@ -75,46 +76,51 @@ class BTreeBasedOrderBook: OrderBookProtocol {
 extension BTreeBasedOrderBook {
     
     func addLimitSell(order: inout Order) {
-        buyBook.withCursorAtStart { (cursor) in
-            while !cursor.isAtEnd && cursor.key.amount >= order.price && order.shares > 0 {
-                var pointOrders = cursor.value
-                
-                while pointOrders.count > 0 && order.shares > 0  {
-                    let shares = min(order.shares, pointOrders[0].shares)
+        
+        if buyMax >= order.price {
+            buyBook.withCursorAtStart { (cursor) in
+                while !cursor.isAtEnd && cursor.key.amount >= order.price && order.shares > 0 {
+                    let pointOrders = cursor.value
                     
-                    order.shares -= shares
-                    pointOrders[0].shares -= shares
-                    
-                    tradeEvent(buyer: pointOrders[0], seller: order, shares: shares)
-                    
-                    if pointOrders[0].shares == 0 {
-                        pointOrders.remove(at: 0)
+                    while let topShares = pointOrders.first?.shares, order.shares > 0  {
+                        let shares = min(order.shares, topShares)
+                        
+                        order.shares -= shares
+                        pointOrders.updateFirst(block: { (p: inout Order) in p.shares -= shares })
+                        
+                        tradeEvent(buyer: pointOrders.first!, seller: order, shares: shares)
+                        
+                        if topShares == shares {
+                            pointOrders.popFirst()
+                        }
                     }
-                }
-                
-                if pointOrders.count == 0 {
-                    cursor.remove()
-                } else {
-                    _ = cursor.setValue(pointOrders)
-                    break
+                    
+                    if pointOrders.isEmpty {
+                        cursor.remove()
+                        if !cursor.isAtEnd {
+                            buyMax = cursor.key.amount
+                        } else {
+                            buyMax = 0
+                        }
+                    } else {
+                        break
+                    }
                 }
             }
         }
         
         if order.shares > 0 {
             let point = SellPricePoint(amount: order.price)
-            var found = false
             sellBook.withCursor(onKey: point, body: { (cursor) in
                 if !cursor.isAtEnd {
-                    var orders = cursor.value
-                    orders.append(order)
-                    _ = cursor.setValue(orders)
-                    found = true
+                    cursor.value.pushLast(order)
+                } else {
+                    cursor.insert((point, FastDeque([order])))
                 }
             })
             
-            if !found {
-                sellBook.insert((point, [order]))
+            if order.price < sellMin {
+                sellMin = order.price
             }
             
             prices[order.id] = (order.price, order.side)
@@ -122,46 +128,51 @@ extension BTreeBasedOrderBook {
     }
     
     func addLimitBuy(order: inout Order) {
-        sellBook.withCursorAtStart { (cursor) in
-            while !cursor.isAtEnd && cursor.key.amount <= order.price && order.shares > 0 {
-                var pointOrders = cursor.value
+        
+        if sellMin <= order.price {
+            sellBook.withCursorAtStart { (cursor) in
+                while !cursor.isAtEnd && cursor.key.amount <= order.price && order.shares > 0 {
+                    let pointOrders = cursor.value
                 
-                while pointOrders.count > 0 && order.shares > 0  {
-                    let shares = min(order.shares, pointOrders[0].shares)
+                    while let topShares = pointOrders.first?.shares, order.shares > 0  {
+                        let shares = min(order.shares, topShares)
                     
-                    order.shares -= shares
-                    pointOrders[0].shares -= shares
+                        order.shares -= shares
+                        pointOrders.updateFirst(block: { (p: inout Order) in p.shares -= shares })
                     
-                    tradeEvent(buyer: order, seller: pointOrders[0], shares: shares)
+                        tradeEvent(buyer: order, seller: pointOrders.first!, shares: shares)
                     
-                    if pointOrders[0].shares == 0 {
-                        pointOrders.remove(at: 0)
+                        if topShares == shares {
+                            pointOrders.popFirst()
+                        }
                     }
-                }
                 
-                if pointOrders.count == 0 {
-                    cursor.remove()
-                } else {
-                    _ = cursor.setValue(pointOrders)
-                    break
+                    if pointOrders.isEmpty {
+                        cursor.remove()
+                        if !cursor.isAtEnd {
+                            sellMin = cursor.key.amount
+                        } else {
+                            sellMin = UInt64.max
+                        }
+                    } else {
+                        break
+                    }
                 }
             }
         }
         
         if order.shares > 0 {
             let point = BuyPricePoint(amount: order.price)
-            var found = false
             buyBook.withCursor(onKey: point, body: { (cursor) in
                 if !cursor.isAtEnd {
-                    var orders = cursor.value
-                    orders.append(order)
-                    _ = cursor.setValue(orders)
-                    found = true
+                    cursor.value.pushLast(order)
+                } else {
+                    cursor.insert((point, FastDeque([order])))
                 }
             })
             
-            if !found {
-                buyBook.insert((point, [order]))
+            if order.price > buyMax {
+                buyMax = order.price
             }
             
             prices[order.id] = (order.price, order.side)
@@ -172,13 +183,8 @@ extension BTreeBasedOrderBook {
         let point = BuyPricePoint(amount: price)
         buyBook.withCursor(onKey: point) { (cursor) in
             if !cursor.isAtEnd {
-                var orders = cursor.value
-                if let indx = orders.index(where: { (p) -> Bool in p.id == id }) {
-                    orders.remove(at: indx)
-                    _ = cursor.setValue(orders)
-                    
-                    self.cancelEvent(orderId: id)
-                }
+                cursor.value.remove(check: { (p) -> Bool in return p.id == id })
+                self.cancelEvent(orderId: id)
             }
         }
     }
@@ -187,13 +193,8 @@ extension BTreeBasedOrderBook {
         let point = SellPricePoint(amount: price)
         sellBook.withCursor(onKey: point) { (cursor) in
             if !cursor.isAtEnd {
-                var orders = cursor.value
-                if let indx = orders.index(where: { (p) -> Bool in p.id == id }) {
-                    orders.remove(at: indx)
-                    _ = cursor.setValue(orders)
-                    
-                    self.cancelEvent(orderId: id)
-                }
+                cursor.value.remove(check: { (p) -> Bool in return p.id == id })
+                self.cancelEvent(orderId: id)
             }
         }
     }

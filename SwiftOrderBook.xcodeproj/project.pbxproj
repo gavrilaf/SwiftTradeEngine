@@ -7,246 +7,255 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		461889A71EC97E9800185716 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461889A21EC97C6E00185716 /* FeedParser.swift */; };
-		461889B01ECA011400185716 /* ScoresExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461889AC1EC9FE1600185716 /* ScoresExecutor.swift */; };
-		461889B11ECA011800185716 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461889AE1ECA008300185716 /* Formatter.swift */; };
-		OBJ_100 /* BTreeOrderBookSimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* BTreeOrderBookSimpleTests.swift */; };
-		OBJ_102 /* BTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* BTree.framework */; };
-		OBJ_103 /* OrderBookLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* OrderBookLib.framework */; };
-		OBJ_52 /* BridgedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* BridgedList.swift */; };
-		OBJ_53 /* BTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* BTree.swift */; };
-		OBJ_54 /* BTreeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* BTreeBuilder.swift */; };
-		OBJ_55 /* BTreeComparisons.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* BTreeComparisons.swift */; };
-		OBJ_56 /* BTreeCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* BTreeCursor.swift */; };
-		OBJ_57 /* BTreeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* BTreeIndex.swift */; };
-		OBJ_58 /* BTreeIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* BTreeIterator.swift */; };
-		OBJ_59 /* BTreeMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* BTreeMerger.swift */; };
-		OBJ_60 /* BTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* BTreeNode.swift */; };
-		OBJ_61 /* BTreePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* BTreePath.swift */; };
-		OBJ_62 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Compatibility.swift */; };
-		OBJ_63 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* List.swift */; };
-		OBJ_64 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Map.swift */; };
-		OBJ_65 /* SortedBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* SortedBag.swift */; };
-		OBJ_66 /* SortedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* SortedSet.swift */; };
-		OBJ_67 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* Weak.swift */; };
-		OBJ_74 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
-		OBJ_76 /* BTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* BTree.framework */; };
-		OBJ_77 /* OrderBookLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* OrderBookLib.framework */; };
-		OBJ_85 /* OrderBookProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* OrderBookProtocol.swift */; };
-		OBJ_86 /* TradeEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TradeEngineProtocol.swift */; };
-		OBJ_87 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Order.swift */; };
-		OBJ_88 /* PricePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* PricePoint.swift */; };
-		OBJ_89 /* TradeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TradeEvent.swift */; };
-		OBJ_90 /* BTreeBasedOrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* BTreeBasedOrderBook.swift */; };
-		OBJ_93 /* BTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* BTree.framework */; };
+		46CA0BC71ECB78C4001530AC /* FastDeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA0BC61ECB78C4001530AC /* FastDeque.swift */; };
+		OBJ_104 /* BTreeOrderBookSimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* BTreeOrderBookSimpleTests.swift */; };
+		OBJ_106 /* BTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* BTree.framework */; };
+		OBJ_107 /* OrderBookLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* OrderBookLib.framework */; };
+		OBJ_54 /* BridgedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* BridgedList.swift */; };
+		OBJ_55 /* BTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* BTree.swift */; };
+		OBJ_56 /* BTreeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* BTreeBuilder.swift */; };
+		OBJ_57 /* BTreeComparisons.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* BTreeComparisons.swift */; };
+		OBJ_58 /* BTreeCursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* BTreeCursor.swift */; };
+		OBJ_59 /* BTreeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* BTreeIndex.swift */; };
+		OBJ_60 /* BTreeIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* BTreeIterator.swift */; };
+		OBJ_61 /* BTreeMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* BTreeMerger.swift */; };
+		OBJ_62 /* BTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* BTreeNode.swift */; };
+		OBJ_63 /* BTreePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* BTreePath.swift */; };
+		OBJ_64 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Compatibility.swift */; };
+		OBJ_65 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* List.swift */; };
+		OBJ_66 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Map.swift */; };
+		OBJ_67 /* SortedBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* SortedBag.swift */; };
+		OBJ_68 /* SortedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* SortedSet.swift */; };
+		OBJ_69 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Weak.swift */; };
+		OBJ_76 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* FeedParser.swift */; };
+		OBJ_77 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Formatter.swift */; };
+		OBJ_78 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* main.swift */; };
+		OBJ_79 /* ScoresExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ScoresExecutor.swift */; };
+		OBJ_81 /* BTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* BTree.framework */; };
+		OBJ_82 /* OrderBookLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* OrderBookLib.framework */; };
+		OBJ_90 /* OrderBookProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* OrderBookProtocol.swift */; };
+		OBJ_91 /* TradeEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* TradeEngineProtocol.swift */; };
+		OBJ_92 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Order.swift */; };
+		OBJ_93 /* PricePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* PricePoint.swift */; };
+		OBJ_94 /* TradeEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* TradeEvent.swift */; };
+		OBJ_95 /* BTreeBasedOrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* BTreeBasedOrderBook.swift */; };
+		OBJ_97 /* BTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* BTree.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		46918A521EBDEECE002C3333 /* PBXContainerItemProxy */ = {
+		468013D31ECA3B0900A9A121 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_47;
+			remoteGlobalIDString = OBJ_49;
 			remoteInfo = BTree;
 		};
-		46918A531EBDEECE002C3333 /* PBXContainerItemProxy */ = {
+		468013D41ECA3B0900A9A121 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_80;
+			remoteGlobalIDString = OBJ_85;
 			remoteInfo = OrderBookLib;
 		};
-		46918A541EBDEECE002C3333 /* PBXContainerItemProxy */ = {
+		468013D51ECA3B0900A9A121 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_47;
+			remoteGlobalIDString = OBJ_49;
 			remoteInfo = BTree;
 		};
-		46918A551EBDEECE002C3333 /* PBXContainerItemProxy */ = {
+		468013D61ECA3B0900A9A121 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_47;
+			remoteGlobalIDString = OBJ_49;
 			remoteInfo = BTree;
 		};
-		46918A561EBDEECE002C3333 /* PBXContainerItemProxy */ = {
+		468013D71ECA3B0900A9A121 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_80;
+			remoteGlobalIDString = OBJ_85;
 			remoteInfo = OrderBookLib;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		461889A21EC97C6E00185716 /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
-		461889A41EC97D5400185716 /* OrdersFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OrdersFeed.json; sourceTree = "<group>"; };
-		461889A91EC986CE00185716 /* OrdersFeed2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OrdersFeed2.json; sourceTree = "<group>"; };
-		461889AC1EC9FE1600185716 /* ScoresExecutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresExecutor.swift; sourceTree = "<group>"; };
-		461889AE1ECA008300185716 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
-		OBJ_12 /* OrderBookProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookProtocol.swift; sourceTree = "<group>"; };
-		OBJ_13 /* TradeEngineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeEngineProtocol.swift; sourceTree = "<group>"; };
-		OBJ_15 /* BTreeBasedOrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeBasedOrderBook.swift; sourceTree = "<group>"; };
-		OBJ_18 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		OBJ_19 /* PricePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePoint.swift; sourceTree = "<group>"; };
-		OBJ_20 /* TradeEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeEvent.swift; sourceTree = "<group>"; };
-		OBJ_23 /* BTreeOrderBookSimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeOrderBookSimpleTests.swift; sourceTree = "<group>"; };
-		OBJ_26 /* BridgedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgedList.swift; sourceTree = "<group>"; };
-		OBJ_27 /* BTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTree.swift; sourceTree = "<group>"; };
-		OBJ_28 /* BTreeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeBuilder.swift; sourceTree = "<group>"; };
-		OBJ_29 /* BTreeComparisons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeComparisons.swift; sourceTree = "<group>"; };
-		OBJ_30 /* BTreeCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeCursor.swift; sourceTree = "<group>"; };
-		OBJ_31 /* BTreeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeIndex.swift; sourceTree = "<group>"; };
-		OBJ_32 /* BTreeIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeIterator.swift; sourceTree = "<group>"; };
-		OBJ_33 /* BTreeMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeMerger.swift; sourceTree = "<group>"; };
-		OBJ_34 /* BTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeNode.swift; sourceTree = "<group>"; };
-		OBJ_35 /* BTreePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreePath.swift; sourceTree = "<group>"; };
-		OBJ_36 /* Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatibility.swift; sourceTree = "<group>"; };
-		OBJ_37 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
-		OBJ_38 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		OBJ_39 /* SortedBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedBag.swift; sourceTree = "<group>"; };
-		OBJ_40 /* SortedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedSet.swift; sourceTree = "<group>"; };
-		OBJ_41 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
-		OBJ_43 /* BTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_44 /* OrderBookApp */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrderBookApp; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_45 /* OrderBookLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OrderBookLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_46 /* OrderBookLibTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = OrderBookLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46CA0BC61ECB78C4001530AC /* FastDeque.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastDeque.swift; sourceTree = "<group>"; };
+		OBJ_10 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		OBJ_11 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_12 /* ScoresExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresExecutor.swift; sourceTree = "<group>"; };
+		OBJ_15 /* OrderBookProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookProtocol.swift; sourceTree = "<group>"; };
+		OBJ_16 /* TradeEngineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeEngineProtocol.swift; sourceTree = "<group>"; };
+		OBJ_18 /* BTreeBasedOrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeBasedOrderBook.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		OBJ_21 /* PricePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePoint.swift; sourceTree = "<group>"; };
+		OBJ_22 /* TradeEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeEvent.swift; sourceTree = "<group>"; };
+		OBJ_25 /* BTreeOrderBookSimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeOrderBookSimpleTests.swift; sourceTree = "<group>"; };
+		OBJ_28 /* BridgedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgedList.swift; sourceTree = "<group>"; };
+		OBJ_29 /* BTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTree.swift; sourceTree = "<group>"; };
+		OBJ_30 /* BTreeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeBuilder.swift; sourceTree = "<group>"; };
+		OBJ_31 /* BTreeComparisons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeComparisons.swift; sourceTree = "<group>"; };
+		OBJ_32 /* BTreeCursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeCursor.swift; sourceTree = "<group>"; };
+		OBJ_33 /* BTreeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeIndex.swift; sourceTree = "<group>"; };
+		OBJ_34 /* BTreeIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeIterator.swift; sourceTree = "<group>"; };
+		OBJ_35 /* BTreeMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeMerger.swift; sourceTree = "<group>"; };
+		OBJ_36 /* BTreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeNode.swift; sourceTree = "<group>"; };
+		OBJ_37 /* BTreePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreePath.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compatibility.swift; sourceTree = "<group>"; };
+		OBJ_39 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		OBJ_40 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		OBJ_41 /* SortedBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedBag.swift; sourceTree = "<group>"; };
+		OBJ_42 /* SortedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedSet.swift; sourceTree = "<group>"; };
+		OBJ_43 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		OBJ_45 /* BTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_46 /* OrderBookApp */ = {isa = PBXFileReference; lastKnownFileType = text; path = OrderBookApp; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_47 /* OrderBookLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OrderBookLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_48 /* OrderBookLibTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = OrderBookLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_9 /* FeedParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_101 /* Frameworks */ = {
+		OBJ_105 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_102 /* BTree.framework in Frameworks */,
-				OBJ_103 /* OrderBookLib.framework in Frameworks */,
+				OBJ_106 /* BTree.framework in Frameworks */,
+				OBJ_107 /* OrderBookLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_68 /* Frameworks */ = {
+		OBJ_70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_75 /* Frameworks */ = {
+		OBJ_80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_76 /* BTree.framework in Frameworks */,
-				OBJ_77 /* OrderBookLib.framework in Frameworks */,
+				OBJ_81 /* BTree.framework in Frameworks */,
+				OBJ_82 /* OrderBookLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_92 /* Frameworks */ = {
+		OBJ_96 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_93 /* BTree.framework in Frameworks */,
+				OBJ_97 /* BTree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_10 /* OrderBookLib */ = {
+		46CA0BC51ECB786E001530AC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* Engine */,
-				OBJ_17 /* Types */,
+				46CA0BC61ECB78C4001530AC /* FastDeque.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		OBJ_13 /* OrderBookLib */ = {
+			isa = PBXGroup;
+			children = (
+				46CA0BC51ECB786E001530AC /* Utils */,
+				OBJ_14 /* Engine */,
+				OBJ_19 /* Types */,
 			);
 			name = OrderBookLib;
 			path = Sources/OrderBookLib;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_11 /* Engine */ = {
+		OBJ_14 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* OrderBookProtocol.swift */,
-				OBJ_13 /* TradeEngineProtocol.swift */,
-				OBJ_14 /* OrderBook */,
+				OBJ_15 /* OrderBookProtocol.swift */,
+				OBJ_16 /* TradeEngineProtocol.swift */,
+				OBJ_17 /* OrderBook */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
 		};
-		OBJ_14 /* OrderBook */ = {
+		OBJ_17 /* OrderBook */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* BTreeBasedOrderBook.swift */,
+				OBJ_18 /* BTreeBasedOrderBook.swift */,
 			);
 			path = OrderBook;
 			sourceTree = "<group>";
 		};
-		OBJ_17 /* Types */ = {
+		OBJ_19 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* Order.swift */,
-				OBJ_19 /* PricePoint.swift */,
-				OBJ_20 /* TradeEvent.swift */,
+				OBJ_20 /* Order.swift */,
+				OBJ_21 /* PricePoint.swift */,
+				OBJ_22 /* TradeEvent.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
 		};
-		OBJ_21 /* Tests */ = {
+		OBJ_23 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* OrderBookLibTests */,
+				OBJ_24 /* OrderBookLibTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_22 /* OrderBookLibTests */ = {
+		OBJ_24 /* OrderBookLibTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_23 /* BTreeOrderBookSimpleTests.swift */,
+				OBJ_25 /* BTreeOrderBookSimpleTests.swift */,
 			);
 			name = OrderBookLibTests;
 			path = Tests/OrderBookLibTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_24 /* Dependencies */ = {
+		OBJ_26 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_25 /* BTree 4.0.2 */,
+				OBJ_27 /* BTree 4.0.2 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_25 /* BTree 4.0.2 */ = {
+		OBJ_27 /* BTree 4.0.2 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_26 /* BridgedList.swift */,
-				OBJ_27 /* BTree.swift */,
-				OBJ_28 /* BTreeBuilder.swift */,
-				OBJ_29 /* BTreeComparisons.swift */,
-				OBJ_30 /* BTreeCursor.swift */,
-				OBJ_31 /* BTreeIndex.swift */,
-				OBJ_32 /* BTreeIterator.swift */,
-				OBJ_33 /* BTreeMerger.swift */,
-				OBJ_34 /* BTreeNode.swift */,
-				OBJ_35 /* BTreePath.swift */,
-				OBJ_36 /* Compatibility.swift */,
-				OBJ_37 /* List.swift */,
-				OBJ_38 /* Map.swift */,
-				OBJ_39 /* SortedBag.swift */,
-				OBJ_40 /* SortedSet.swift */,
-				OBJ_41 /* Weak.swift */,
+				OBJ_28 /* BridgedList.swift */,
+				OBJ_29 /* BTree.swift */,
+				OBJ_30 /* BTreeBuilder.swift */,
+				OBJ_31 /* BTreeComparisons.swift */,
+				OBJ_32 /* BTreeCursor.swift */,
+				OBJ_33 /* BTreeIndex.swift */,
+				OBJ_34 /* BTreeIterator.swift */,
+				OBJ_35 /* BTreeMerger.swift */,
+				OBJ_36 /* BTreeNode.swift */,
+				OBJ_37 /* BTreePath.swift */,
+				OBJ_38 /* Compatibility.swift */,
+				OBJ_39 /* List.swift */,
+				OBJ_40 /* Map.swift */,
+				OBJ_41 /* SortedBag.swift */,
+				OBJ_42 /* SortedSet.swift */,
+				OBJ_43 /* Weak.swift */,
 			);
 			name = "BTree 4.0.2";
 			path = ".build/checkouts/BTree-322843917996030299/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_42 /* Products */ = {
+		OBJ_44 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_43 /* BTree.framework */,
-				OBJ_44 /* OrderBookApp */,
-				OBJ_45 /* OrderBookLib.framework */,
-				OBJ_46 /* OrderBookLibTests.xctest */,
+				OBJ_45 /* BTree.framework */,
+				OBJ_46 /* OrderBookApp */,
+				OBJ_47 /* OrderBookLib.framework */,
+				OBJ_48 /* OrderBookLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -256,9 +265,9 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_21 /* Tests */,
-				OBJ_24 /* Dependencies */,
-				OBJ_42 /* Products */,
+				OBJ_23 /* Tests */,
+				OBJ_26 /* Dependencies */,
+				OBJ_44 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,7 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_8 /* OrderBookApp */,
-				OBJ_10 /* OrderBookLib */,
+				OBJ_13 /* OrderBookLib */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -274,12 +283,10 @@
 		OBJ_8 /* OrderBookApp */ = {
 			isa = PBXGroup;
 			children = (
-				461889A41EC97D5400185716 /* OrdersFeed.json */,
-				461889A91EC986CE00185716 /* OrdersFeed2.json */,
-				OBJ_9 /* main.swift */,
-				461889A21EC97C6E00185716 /* FeedParser.swift */,
-				461889AC1EC9FE1600185716 /* ScoresExecutor.swift */,
-				461889AE1ECA008300185716 /* Formatter.swift */,
+				OBJ_9 /* FeedParser.swift */,
+				OBJ_10 /* Formatter.swift */,
+				OBJ_11 /* main.swift */,
+				OBJ_12 /* ScoresExecutor.swift */,
 			);
 			name = OrderBookApp;
 			path = Sources/OrderBookApp;
@@ -288,12 +295,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		OBJ_47 /* BTree */ = {
+		OBJ_49 /* BTree */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_48 /* Build configuration list for PBXNativeTarget "BTree" */;
+			buildConfigurationList = OBJ_50 /* Build configuration list for PBXNativeTarget "BTree" */;
 			buildPhases = (
-				OBJ_51 /* Sources */,
-				OBJ_68 /* Frameworks */,
+				OBJ_53 /* Sources */,
+				OBJ_70 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,60 +308,60 @@
 			);
 			name = BTree;
 			productName = BTree;
-			productReference = OBJ_43 /* BTree.framework */;
+			productReference = OBJ_45 /* BTree.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_69 /* OrderBookApp */ = {
+		OBJ_71 /* OrderBookApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_70 /* Build configuration list for PBXNativeTarget "OrderBookApp" */;
+			buildConfigurationList = OBJ_72 /* Build configuration list for PBXNativeTarget "OrderBookApp" */;
 			buildPhases = (
-				OBJ_73 /* Sources */,
-				OBJ_75 /* Frameworks */,
+				OBJ_75 /* Sources */,
+				OBJ_80 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_78 /* PBXTargetDependency */,
-				OBJ_79 /* PBXTargetDependency */,
+				OBJ_83 /* PBXTargetDependency */,
+				OBJ_84 /* PBXTargetDependency */,
 			);
 			name = OrderBookApp;
 			productName = OrderBookApp;
-			productReference = OBJ_44 /* OrderBookApp */;
+			productReference = OBJ_46 /* OrderBookApp */;
 			productType = "com.apple.product-type.tool";
 		};
-		OBJ_80 /* OrderBookLib */ = {
+		OBJ_85 /* OrderBookLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_81 /* Build configuration list for PBXNativeTarget "OrderBookLib" */;
+			buildConfigurationList = OBJ_86 /* Build configuration list for PBXNativeTarget "OrderBookLib" */;
 			buildPhases = (
-				OBJ_84 /* Sources */,
-				OBJ_92 /* Frameworks */,
+				OBJ_89 /* Sources */,
+				OBJ_96 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_94 /* PBXTargetDependency */,
+				OBJ_98 /* PBXTargetDependency */,
 			);
 			name = OrderBookLib;
 			productName = OrderBookLib;
-			productReference = OBJ_45 /* OrderBookLib.framework */;
+			productReference = OBJ_47 /* OrderBookLib.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_95 /* OrderBookLibTests */ = {
+		OBJ_99 /* OrderBookLibTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_96 /* Build configuration list for PBXNativeTarget "OrderBookLibTests" */;
+			buildConfigurationList = OBJ_100 /* Build configuration list for PBXNativeTarget "OrderBookLibTests" */;
 			buildPhases = (
-				OBJ_99 /* Sources */,
-				OBJ_101 /* Frameworks */,
+				OBJ_103 /* Sources */,
+				OBJ_105 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_104 /* PBXTargetDependency */,
-				OBJ_105 /* PBXTargetDependency */,
+				OBJ_108 /* PBXTargetDependency */,
+				OBJ_109 /* PBXTargetDependency */,
 			);
 			name = OrderBookLibTests;
 			productName = OrderBookLibTests;
-			productReference = OBJ_46 /* OrderBookLibTests.xctest */;
+			productReference = OBJ_48 /* OrderBookLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -373,105 +380,140 @@
 				en,
 			);
 			mainGroup = OBJ_5;
-			productRefGroup = OBJ_42 /* Products */;
+			productRefGroup = OBJ_44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				OBJ_47 /* BTree */,
-				OBJ_69 /* OrderBookApp */,
-				OBJ_80 /* OrderBookLib */,
-				OBJ_95 /* OrderBookLibTests */,
+				OBJ_49 /* BTree */,
+				OBJ_71 /* OrderBookApp */,
+				OBJ_85 /* OrderBookLib */,
+				OBJ_99 /* OrderBookLibTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_51 /* Sources */ = {
+		OBJ_103 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_52 /* BridgedList.swift in Sources */,
-				OBJ_53 /* BTree.swift in Sources */,
-				OBJ_54 /* BTreeBuilder.swift in Sources */,
-				OBJ_55 /* BTreeComparisons.swift in Sources */,
-				OBJ_56 /* BTreeCursor.swift in Sources */,
-				OBJ_57 /* BTreeIndex.swift in Sources */,
-				OBJ_58 /* BTreeIterator.swift in Sources */,
-				OBJ_59 /* BTreeMerger.swift in Sources */,
-				OBJ_60 /* BTreeNode.swift in Sources */,
-				OBJ_61 /* BTreePath.swift in Sources */,
-				OBJ_62 /* Compatibility.swift in Sources */,
-				OBJ_63 /* List.swift in Sources */,
-				OBJ_64 /* Map.swift in Sources */,
-				OBJ_65 /* SortedBag.swift in Sources */,
-				OBJ_66 /* SortedSet.swift in Sources */,
-				OBJ_67 /* Weak.swift in Sources */,
+				OBJ_104 /* BTreeOrderBookSimpleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_73 /* Sources */ = {
+		OBJ_53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				461889A71EC97E9800185716 /* FeedParser.swift in Sources */,
-				461889B01ECA011400185716 /* ScoresExecutor.swift in Sources */,
-				461889B11ECA011800185716 /* Formatter.swift in Sources */,
-				OBJ_74 /* main.swift in Sources */,
+				OBJ_54 /* BridgedList.swift in Sources */,
+				OBJ_55 /* BTree.swift in Sources */,
+				OBJ_56 /* BTreeBuilder.swift in Sources */,
+				OBJ_57 /* BTreeComparisons.swift in Sources */,
+				OBJ_58 /* BTreeCursor.swift in Sources */,
+				OBJ_59 /* BTreeIndex.swift in Sources */,
+				OBJ_60 /* BTreeIterator.swift in Sources */,
+				OBJ_61 /* BTreeMerger.swift in Sources */,
+				OBJ_62 /* BTreeNode.swift in Sources */,
+				OBJ_63 /* BTreePath.swift in Sources */,
+				OBJ_64 /* Compatibility.swift in Sources */,
+				OBJ_65 /* List.swift in Sources */,
+				OBJ_66 /* Map.swift in Sources */,
+				OBJ_67 /* SortedBag.swift in Sources */,
+				OBJ_68 /* SortedSet.swift in Sources */,
+				OBJ_69 /* Weak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_84 /* Sources */ = {
+		OBJ_75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_85 /* OrderBookProtocol.swift in Sources */,
-				OBJ_86 /* TradeEngineProtocol.swift in Sources */,
-				OBJ_87 /* Order.swift in Sources */,
-				OBJ_88 /* PricePoint.swift in Sources */,
-				OBJ_89 /* TradeEvent.swift in Sources */,
-				OBJ_90 /* BTreeBasedOrderBook.swift in Sources */,
+				OBJ_76 /* FeedParser.swift in Sources */,
+				OBJ_77 /* Formatter.swift in Sources */,
+				OBJ_78 /* main.swift in Sources */,
+				OBJ_79 /* ScoresExecutor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_99 /* Sources */ = {
+		OBJ_89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_100 /* BTreeOrderBookSimpleTests.swift in Sources */,
+				OBJ_90 /* OrderBookProtocol.swift in Sources */,
+				OBJ_91 /* TradeEngineProtocol.swift in Sources */,
+				OBJ_92 /* Order.swift in Sources */,
+				OBJ_93 /* PricePoint.swift in Sources */,
+				46CA0BC71ECB78C4001530AC /* FastDeque.swift in Sources */,
+				OBJ_94 /* TradeEvent.swift in Sources */,
+				OBJ_95 /* BTreeBasedOrderBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_104 /* PBXTargetDependency */ = {
+		OBJ_108 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_47 /* BTree */;
-			targetProxy = 46918A551EBDEECE002C3333 /* PBXContainerItemProxy */;
+			target = OBJ_49 /* BTree */;
+			targetProxy = 468013D61ECA3B0900A9A121 /* PBXContainerItemProxy */;
 		};
-		OBJ_105 /* PBXTargetDependency */ = {
+		OBJ_109 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_80 /* OrderBookLib */;
-			targetProxy = 46918A561EBDEECE002C3333 /* PBXContainerItemProxy */;
+			target = OBJ_85 /* OrderBookLib */;
+			targetProxy = 468013D71ECA3B0900A9A121 /* PBXContainerItemProxy */;
 		};
-		OBJ_78 /* PBXTargetDependency */ = {
+		OBJ_83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_47 /* BTree */;
-			targetProxy = 46918A521EBDEECE002C3333 /* PBXContainerItemProxy */;
+			target = OBJ_49 /* BTree */;
+			targetProxy = 468013D31ECA3B0900A9A121 /* PBXContainerItemProxy */;
 		};
-		OBJ_79 /* PBXTargetDependency */ = {
+		OBJ_84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_80 /* OrderBookLib */;
-			targetProxy = 46918A531EBDEECE002C3333 /* PBXContainerItemProxy */;
+			target = OBJ_85 /* OrderBookLib */;
+			targetProxy = 468013D41ECA3B0900A9A121 /* PBXContainerItemProxy */;
 		};
-		OBJ_94 /* PBXTargetDependency */ = {
+		OBJ_98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_47 /* BTree */;
-			targetProxy = 46918A541EBDEECE002C3333 /* PBXContainerItemProxy */;
+			target = OBJ_49 /* BTree */;
+			targetProxy = 468013D51ECA3B0900A9A121 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		OBJ_101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookLibTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = OrderBookLibTests;
+			};
+			name = Debug;
+		};
+		OBJ_102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookLibTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = OrderBookLibTests;
+			};
+			name = Release;
+		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -516,7 +558,7 @@
 			};
 			name = Release;
 		};
-		OBJ_49 /* Debug */ = {
+		OBJ_51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -537,7 +579,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_50 /* Release */ = {
+		OBJ_52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -558,7 +600,7 @@
 			};
 			name = Release;
 		};
-		OBJ_71 /* Debug */ = {
+		OBJ_73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -576,7 +618,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_72 /* Release */ = {
+		OBJ_74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -594,7 +636,7 @@
 			};
 			name = Release;
 		};
-		OBJ_82 /* Debug */ = {
+		OBJ_87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -615,7 +657,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_83 /* Release */ = {
+		OBJ_88 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -633,46 +675,21 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGET_NAME = OrderBookLib;
-			};
-			name = Release;
-		};
-		OBJ_97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookLibTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				TARGET_NAME = OrderBookLibTests;
-			};
-			name = Debug;
-		};
-		OBJ_98 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SwiftOrderBook.xcodeproj/OrderBookLibTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				TARGET_NAME = OrderBookLibTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		OBJ_100 /* Build configuration list for PBXNativeTarget "OrderBookLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_101 /* Debug */,
+				OBJ_102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "SwiftOrderBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -682,38 +699,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_48 /* Build configuration list for PBXNativeTarget "BTree" */ = {
+		OBJ_50 /* Build configuration list for PBXNativeTarget "BTree" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_49 /* Debug */,
-				OBJ_50 /* Release */,
+				OBJ_51 /* Debug */,
+				OBJ_52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_70 /* Build configuration list for PBXNativeTarget "OrderBookApp" */ = {
+		OBJ_72 /* Build configuration list for PBXNativeTarget "OrderBookApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_71 /* Debug */,
-				OBJ_72 /* Release */,
+				OBJ_73 /* Debug */,
+				OBJ_74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_81 /* Build configuration list for PBXNativeTarget "OrderBookLib" */ = {
+		OBJ_86 /* Build configuration list for PBXNativeTarget "OrderBookLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_82 /* Debug */,
-				OBJ_83 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_96 /* Build configuration list for PBXNativeTarget "OrderBookLibTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_97 /* Debug */,
-				OBJ_98 /* Release */,
+				OBJ_87 /* Debug */,
+				OBJ_88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
