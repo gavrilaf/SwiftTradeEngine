@@ -28,15 +28,12 @@ class BTreeBasedOrderBook: OrderBookProtocol {
     
     func add(order: Order) {
         var copy = order // Create mutable copy
-        let type = (order.type, order.side)
         
-        switch type {
-        case (.limit, .buy):
-            addLimitBuy(order: &copy)
-        case (.limit, .sell):
-            addLimitSell(order: &copy)
-        default:
-            break
+        switch order.side {
+        case .buy:
+            addBuy(order: &copy)
+        case .sell:
+            addSell(order: &copy)
         }
     }
     
@@ -73,7 +70,7 @@ class BTreeBasedOrderBook: OrderBookProtocol {
 
 extension BTreeBasedOrderBook {
     
-    func addLimitSell(order: inout Order) {
+    func addSell(order: inout Order) {
         if buyMax >= order.price {
             buyBook.withCursorAtStart { (cursor) in
                 while !cursor.isAtEnd && cursor.key.amount >= order.price && order.shares > 0 {
@@ -121,7 +118,7 @@ extension BTreeBasedOrderBook {
         }
     }
     
-    func addLimitBuy(order: inout Order) {
+    func addBuy(order: inout Order) {
         if sellMin <= order.price {
             sellBook.withCursorAtStart { (cursor) in
                 while !cursor.isAtEnd && cursor.key.amount <= order.price && order.shares > 0 {

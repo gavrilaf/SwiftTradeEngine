@@ -43,15 +43,18 @@ public func ==(lhs: OrderExecutionInfo, rhs: OrderExecutionInfo) -> Bool {
 
 // MARK:
 public enum TradeEvent {
-    case orderCancelled(id: OrderID)
+    case orderCreated(order: Order)
     case orderExecuted(info: OrderExecutionInfo)
     case orderCompleted(id: OrderID)
+    case orderCancelled(id: OrderID)
 }
 
 extension TradeEvent: Equatable {}
 
 public func ==(lhs: TradeEvent, rhs: TradeEvent) -> Bool {
     switch (lhs, rhs) {
+    case (.orderCreated(let a), .orderCreated(let b)):
+        return a.id == b.id
     case (.orderCancelled(let a), .orderCancelled(let b)):
         return a == b
     case (.orderExecuted(let a), .orderExecuted(let b)):
@@ -65,6 +68,8 @@ public func ==(lhs: TradeEvent, rhs: TradeEvent) -> Bool {
 extension TradeEvent: CustomStringConvertible {
     public var description: String {
         switch self {
+        case .orderCreated(let a):
+            return a.description
         case .orderCancelled(let a):
             return "cancelled(\(a))"
         case .orderExecuted(let a):

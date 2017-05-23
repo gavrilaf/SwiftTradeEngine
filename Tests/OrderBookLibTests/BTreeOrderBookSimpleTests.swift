@@ -11,13 +11,13 @@ import XCTest
 
 class BTreeOrderBookSimpleTests: XCTestCase {
     
-    let oa101x100 = Order(id: 1, type: .limit, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 100)
-    let ob101x100 = Order(id: 2, type: .limit, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 100)
-    let oa101x50  = Order(id: 3, type: .limit, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 50)
-    let ob101x50  = Order(id: 4, type: .limit, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 50)
-    let oa101x25  = Order(id: 5, type: .limit, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 25)
-    let ob101x25  = Order(id: 6, type: .limit, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 25)
-    let ob101x25x = Order(id: 7, type: .limit, side: .buy, symbol: "JPM", trader: "XAM", price: 101, shares: 25)
+    let oa101x100 = Order(id: 1, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 100)
+    let ob101x100 = Order(id: 2, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 100)
+    let oa101x50  = Order(id: 3, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 50)
+    let ob101x50  = Order(id: 4, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 50)
+    let oa101x25  = Order(id: 5, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 25)
+    let ob101x25  = Order(id: 6, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 25)
+    let ob101x25x = Order(id: 7, side: .buy, symbol: "JPM", trader: "XAM", price: 101, shares: 25)
     
     var orderBook: OrderBookProtocol!
     

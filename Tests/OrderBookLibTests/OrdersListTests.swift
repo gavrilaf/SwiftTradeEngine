@@ -11,10 +11,10 @@ import XCTest
 
 class OrdersListTests: XCTestCase {
     
-    let o1 = Order(id: 1, type: .limit, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 100)
-    let o2 = Order(id: 2, type: .limit, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 100)
-    let o3  = Order(id: 3, type: .limit, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 50)
-    let o4  = Order(id: 4, type: .limit, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 50)
+    let o1 = Order(id: 1, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 100)
+    let o2 = Order(id: 2, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 100)
+    let o3  = Order(id: 3, side: .sell, symbol: "JPM", trader: "MAX", price: 101, shares: 50)
+    let o4  = Order(id: 4, side: .buy, symbol: "JPM", trader: "MAX", price: 101, shares: 50)
     
     override func setUp() {
         super.setUp()

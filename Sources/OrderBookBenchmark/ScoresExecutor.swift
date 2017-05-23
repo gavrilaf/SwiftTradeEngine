@@ -53,7 +53,6 @@ struct ScoresExecutor {
             } else {
                 let side = fo.side == .Ask ? OrderSide.sell : OrderSide.buy
                 let order = Order(id: OrderID(i),
-                                  type: .limit,
                                   side: side,
                                   symbol: OBString(fo.symbol),
                                   trader: OBString(fo.trader),

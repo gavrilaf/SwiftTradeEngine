@@ -8,14 +8,18 @@
 
 import Foundation
 
+enum EngineError : Error {
+    case UnknownSymbol(symbol: OBString)
+    case EmptyMarket(symbol: OBString)
+}
+
 protocol TradeEngineProtocol {
     
     var tradeHandler: TradeHandler? { get set }
     
-    func createMarketOrder(side: OrderSide, symbol: String, trader: String, shares: Quantity) -> Order
-    func createLimitOrder(side: OrderSide, symbol: String, trader: String, price: Money, shares: Quantity) -> Order
+    func createMarketOrder(side: OrderSide, symbol: String, trader: String, shares: Quantity) throws -> OrderID
+    func createLimitOrder(side: OrderSide, symbol: String, trader: String, price: Money, shares: Quantity) throws -> OrderID
     
-    func add(order: Order)
     func cancel(orderById id: OrderID)
     
     func sellMin(forSymbol symbol: String) -> Money?

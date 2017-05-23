@@ -15,11 +15,6 @@ public typealias Quantity = UInt64
 
 public typealias OBString = String
 
-public enum OrderType {
-    case limit
-    case market
-}
-
 public enum OrderSide {
     case sell
     case buy
@@ -27,9 +22,8 @@ public enum OrderSide {
 
 
 public struct Order {
-    public init(id: OrderID, type: OrderType, side: OrderSide, symbol: OBString, trader: OBString, price: Money, shares: Quantity) {
+    public init(id: OrderID, side: OrderSide, symbol: OBString, trader: OBString, price: Money, shares: Quantity) {
         self.id     = id
-        self.type   = type
         self.side   = side
         self.symbol = symbol
         self.trader = trader
@@ -38,10 +32,15 @@ public struct Order {
     }
     
     let id: OrderID
-    let type: OrderType
     let side: OrderSide
     let symbol: OBString
     let trader: OBString
     var price: Money
     var shares: Quantity
+}
+
+extension Order: CustomStringConvertible {
+    public var description: String {
+        return "Order(\(id), \(side), \(symbol), \(trader), \(price), \(shares))"
+    }
 }

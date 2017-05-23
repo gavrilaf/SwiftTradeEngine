@@ -3,7 +3,7 @@ import OrderBookLib
 
 print("SwiftOrderBook score app")
 
-let path = "/Users/eugenf/Documents/Projects/swift/SwiftOrderBook/Sources/OrderBookApp/OrdersFeed.json"
+let path = "/Users/eugenf/Documents/Projects/swift/SwiftOrderBook/Sources/OrderBookBenchmark/OrdersFeed.json"
 
 
 let executor = ScoresExecutor()
