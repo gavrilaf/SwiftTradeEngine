@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46CA0BCC1ECC0772001530AC /* OrdersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA0BCB1ECC0772001530AC /* OrdersList.swift */; };
+		46E8CD4D1ECC8121005122BA /* OrdersListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E8CD4C1ECC8121005122BA /* OrdersListTests.swift */; };
 		OBJ_55 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* FeedParser.swift */; };
 		OBJ_56 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Formatter.swift */; };
 		OBJ_57 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* main.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46CA0BCB1ECC0772001530AC /* OrdersList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersList.swift; sourceTree = "<group>"; };
+		46E8CD4C1ECC8121005122BA /* OrdersListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersListTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		OBJ_11 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_12 /* ScoresExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresExecutor.swift; sourceTree = "<group>"; };
@@ -118,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46CA0BCA1ECC0762001530AC /* OrdersList */ = {
+			isa = PBXGroup;
+			children = (
+				46CA0BCB1ECC0772001530AC /* OrdersList.swift */,
+			);
+			path = OrdersList;
+			sourceTree = "<group>";
+		};
 		OBJ_13 /* OrderBookLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +172,7 @@
 		OBJ_23 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				46CA0BCA1ECC0762001530AC /* OrdersList */,
 				OBJ_24 /* BTree */,
 				OBJ_41 /* FastDeque */,
 			);
@@ -209,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_45 /* BTreeOrderBookSimpleTests.swift */,
+				46E8CD4C1ECC8121005122BA /* OrdersListTests.swift */,
 			);
 			name = OrderBookLibTests;
 			path = Tests/OrderBookLibTests;
@@ -224,7 +238,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -232,7 +246,6 @@
 				OBJ_43 /* Tests */,
 				OBJ_46 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -324,7 +337,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +371,7 @@
 				OBJ_70 /* PricePoint.swift in Sources */,
 				OBJ_71 /* TradeEvent.swift in Sources */,
 				OBJ_72 /* BTreeBasedOrderBook.swift in Sources */,
+				46CA0BCC1ECC0772001530AC /* OrdersList.swift in Sources */,
 				OBJ_73 /* BridgedList.swift in Sources */,
 				OBJ_74 /* BTree.swift in Sources */,
 				OBJ_75 /* BTreeBuilder.swift in Sources */,
@@ -382,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				46E8CD4D1ECC8121005122BA /* OrdersListTests.swift in Sources */,
 				OBJ_96 /* BTreeOrderBookSimpleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

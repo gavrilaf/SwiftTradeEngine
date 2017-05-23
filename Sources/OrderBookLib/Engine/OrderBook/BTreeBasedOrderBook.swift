@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import BTree
 
 public struct BTreeBasedOrderBookFactory: OrderBookFactory {
     public init() {}
@@ -53,14 +52,13 @@ class BTreeBasedOrderBook: OrderBookProtocol {
     }
     
     var topSellOrder: Order? {
-        return sellBook.first?.1.first
+        return sellBook.first?.1.checkedTop
     }
     
     var topBuyOrder: Order? {
-        return buyBook.first?.1.first
+        return buyBook.first?.1.checkedTop
     }
     
-    typealias OrdersList = FastDeque<Order>
     typealias BuyOrderBook = BTree<BuyPricePoint, OrdersList>
     typealias SellOrderBook = BTree<SellPricePoint, OrdersList>
     
@@ -76,23 +74,18 @@ class BTreeBasedOrderBook: OrderBookProtocol {
 extension BTreeBasedOrderBook {
     
     func addLimitSell(order: inout Order) {
-        
         if buyMax >= order.price {
             buyBook.withCursorAtStart { (cursor) in
                 while !cursor.isAtEnd && cursor.key.amount >= order.price && order.shares > 0 {
                     let pointOrders = cursor.value
                     
-                    while let topShares = pointOrders.first?.shares, order.shares > 0  {
-                        let shares = min(order.shares, topShares)
+                    while !pointOrders.isEmpty && order.shares > 0  {
+                        let shares = min(order.shares, pointOrders.topShares)
                         
                         order.shares -= shares
-                        pointOrders.updateFirst(block: { (p: inout Order) in p.shares -= shares })
+                        let updatedTop = pointOrders.updateTop(minusShares: shares)
                         
-                        tradeEvent(buyer: pointOrders.first!, seller: order, shares: shares)
-                        
-                        if topShares == shares {
-                            pointOrders.popFirst()
-                        }
+                        tradeEvent(buyer: updatedTop, seller: order, shares: shares)
                     }
                     
                     if pointOrders.isEmpty {
@@ -114,9 +107,9 @@ extension BTreeBasedOrderBook {
             let point = SellPricePoint(amount: order.price)
             sellBook.withCursor(onKey: point, body: { (cursor) in
                 if !cursor.isAtEnd {
-                    cursor.value.pushLast(order)
+                    cursor.value.add(order: order)
                 } else {
-                    cursor.insert((point, FastDeque([order])))
+                    cursor.insert((point, OrdersList(withOrder: order)))
                 }
             })
             
@@ -129,23 +122,18 @@ extension BTreeBasedOrderBook {
     }
     
     func addLimitBuy(order: inout Order) {
-        
         if sellMin <= order.price {
             sellBook.withCursorAtStart { (cursor) in
                 while !cursor.isAtEnd && cursor.key.amount <= order.price && order.shares > 0 {
                     let pointOrders = cursor.value
-                
-                    while let topShares = pointOrders.first?.shares, order.shares > 0  {
-                        let shares = min(order.shares, topShares)
+                    
+                    while !pointOrders.isEmpty && order.shares > 0  {
+                        let shares = min(order.shares, pointOrders.topShares)
                     
                         order.shares -= shares
-                        pointOrders.updateFirst(block: { (p: inout Order) in p.shares -= shares })
-                    
-                        tradeEvent(buyer: order, seller: pointOrders.first!, shares: shares)
-                    
-                        if topShares == shares {
-                            pointOrders.popFirst()
-                        }
+                        let updatedTop = pointOrders.updateTop(minusShares: shares)
+                        
+                        tradeEvent(buyer: order, seller: updatedTop, shares: shares)
                     }
                 
                     if pointOrders.isEmpty {
@@ -167,9 +155,9 @@ extension BTreeBasedOrderBook {
             let point = BuyPricePoint(amount: order.price)
             buyBook.withCursor(onKey: point, body: { (cursor) in
                 if !cursor.isAtEnd {
-                    cursor.value.pushLast(order)
+                    cursor.value.add(order: order)
                 } else {
-                    cursor.insert((point, FastDeque([order])))
+                    cursor.insert((point, OrdersList(withOrder: order)))
                 }
             })
             
@@ -185,7 +173,7 @@ extension BTreeBasedOrderBook {
         let point = BuyPricePoint(amount: price)
         buyBook.withCursor(onKey: point) { (cursor) in
             if !cursor.isAtEnd {
-                cursor.value.remove(check: { (p) -> Bool in return p.id == id })
+                cursor.value.cancel(orderById: id)
                 self.cancelEvent(orderId: id)
             }
         }
@@ -195,7 +183,7 @@ extension BTreeBasedOrderBook {
         let point = SellPricePoint(amount: price)
         sellBook.withCursor(onKey: point) { (cursor) in
             if !cursor.isAtEnd {
-                cursor.value.remove(check: { (p) -> Bool in return p.id == id })
+                cursor.value.cancel(orderById: id)
                 self.cancelEvent(orderId: id)
             }
         }
