@@ -17,8 +17,8 @@ protocol TradeEngineProtocol {
     
     var tradeHandler: TradeHandler? { get set }
     
-    func createMarketOrder(side: OrderSide, symbol: String, trader: String, shares: Quantity) throws -> OrderID
-    func createLimitOrder(side: OrderSide, symbol: String, trader: String, price: Money, shares: Quantity) throws -> OrderID
+    func createMarketOrder(side: OrderSide, symbol: String, trader: String, shares: Quantity) throws -> Order
+    func createLimitOrder(side: OrderSide, symbol: String, trader: String, price: Money, shares: Quantity) throws -> Order
     
     func cancel(orderById id: OrderID)
     

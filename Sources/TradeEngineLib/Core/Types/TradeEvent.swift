@@ -30,7 +30,7 @@ public struct OrderExecutionInfo {
 
 extension OrderExecutionInfo: CustomStringConvertible {
     public var description: String {
-        return "Trade(\(symbol), \(buyTrader), \(sellTrader), \(price), \(shares))"
+        return "Trade(\(symbol), \(buyTrader), \(buyOrder), \(sellTrader), \(sellOrder), \(price), \(shares))"
     }
 }
 

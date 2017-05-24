@@ -27,7 +27,7 @@ class TradeEngine : TradeEngineProtocol {
     
     var tradeHandler: TradeHandler?
     
-    func createMarketOrder(side: OrderSide, symbol: String, trader: String, shares: Quantity) throws -> OrderID {
+    func createMarketOrder(side: OrderSide, symbol: String, trader: String, shares: Quantity) throws -> Order {
         guard let book = getBook(forSymbol: symbol) else {
             throw EngineError.UnknownSymbol(symbol: symbol)
         }
@@ -39,12 +39,13 @@ class TradeEngine : TradeEngineProtocol {
         let id = nextID()
         let order = Order(id: id, side: side, symbol: symbol, trader: trader, price: price, shares: shares)
         
+        orders[id] = order
         book.add(order: order)
         
-        return id
+        return order
     }
     
-    func createLimitOrder(side: OrderSide, symbol: String, trader: String, price: Money, shares: Quantity) throws -> OrderID {
+    func createLimitOrder(side: OrderSide, symbol: String, trader: String, price: Money, shares: Quantity) throws -> Order {
         guard let book = getBook(forSymbol: symbol) else {
             throw EngineError.UnknownSymbol(symbol: symbol)
         }
@@ -53,13 +54,17 @@ class TradeEngine : TradeEngineProtocol {
         let id = nextID()
         let order = Order(id: id, side: side, symbol: symbol, trader: trader, price: price, shares: shares)
         
+        orders[id] = order
         book.add(order: order)
         
-        return id
+        return order
     }
     
     func cancel(orderById id: OrderID) {
-    
+        if let order = orders[id], let book = getBook(forSymbol: order.symbol) {
+            orders.removeValue(forKey: id)
+            book.cancel(orderById: id)
+        }
     }
     
     func sellMin(forSymbol symbol: String) -> Money? {
@@ -84,11 +89,14 @@ class TradeEngine : TradeEngineProtocol {
     //
     
     private func handleEvent(event: TradeEvent) {
-    
+        if let handler = tradeHandler {
+            handler(event)
+        }
     }
     
     // MARK:
     
     private let books: [OBString : OrderBookProtocol]
     private var currentID: OrderID = 0
+    private var orders = Dictionary<OrderID, Order>()
 }
