@@ -1,6 +1,6 @@
 //
 //  BTreeBasedOrderBook.swift
-//  SwiftOrderBook
+//  SwiftTradeEngine
 //
 //  Created by Eugen Fedchenko on 5/6/17.
 //

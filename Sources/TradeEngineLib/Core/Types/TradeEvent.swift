@@ -1,6 +1,6 @@
 //
-//  Event.swift
-//  SwiftOrderBook
+//  TradeEvent.swift
+//  SwiftTradeEngine
 //
 //  Created by Eugen Fedchenko on 4/14/17.
 //  Copyright © 2017 gavrilaf. All rights reserved.
@@ -80,4 +80,6 @@ extension TradeEvent: CustomStringConvertible {
     }
 }
 
+// MARK:
+public typealias TradeHandler = (TradeEvent) -> Void
 

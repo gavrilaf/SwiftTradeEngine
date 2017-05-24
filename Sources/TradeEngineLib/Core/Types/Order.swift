@@ -1,6 +1,6 @@
 //
 //  Order.swift
-//  SwiftOrderBook
+//  SwiftTradeEngine
 //
 //  Created by Eugen Fedchenko on 4/13/17.
 //  Copyright © 2017 gavrilaf. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  FastDeque.swift
-//  SwiftOrderBook
+//  SwiftTradeEngine
 //
 //  Created by Eugen Fedchenko on 5/16/17.
 //

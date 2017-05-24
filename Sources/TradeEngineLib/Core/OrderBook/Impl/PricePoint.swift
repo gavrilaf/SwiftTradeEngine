@@ -1,6 +1,6 @@
 //
 //  PricePoint.swift
-//  SwiftOrderBook
+//  SwiftTradeEngine
 //
 //  Created by Eugen Fedchenko on 4/16/17.
 //

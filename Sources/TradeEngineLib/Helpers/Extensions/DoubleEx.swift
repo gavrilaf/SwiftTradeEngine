@@ -1,6 +1,6 @@
 //
-//  Formatter.swift
-//  SwiftOrderBook
+//  DoubleEx.swift
+//  SwiftTradeEngine
 //
 //  Created by Eugen Fedchenko on 5/15/17.
 //

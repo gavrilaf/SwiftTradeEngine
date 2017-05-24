@@ -1,20 +1,12 @@
 //
 //  TradeEngine.swift
-//  SwiftOrderBook
+//  SwiftTradeEngine
 //
 //  Created by Eugen Fedchenko on 5/23/17.
 //
 //
 
 import Foundation
-
-func +<Key, Value> (lhs: [Key: Value], rhs: (Key, Value)) -> [Key: Value] {
-    var result = lhs
-    result[rhs.0] = rhs.1
-    return result
-}
-
-
 
 class TradeEngine : TradeEngineProtocol {
     
