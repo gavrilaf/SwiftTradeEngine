@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import OrderBookLib
+@testable import TradeEngineLib
 
 class OrdersListTests: XCTestCase {
     
