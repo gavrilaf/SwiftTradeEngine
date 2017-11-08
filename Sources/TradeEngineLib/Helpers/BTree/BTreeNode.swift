@@ -3,7 +3,7 @@
 //  BTree
 //
 //  Created by Károly Lőrentey on 2016-01-13.
-//  Copyright © 2015–2016 Károly Lőrentey.
+//  Copyright © 2015–2017 Károly Lőrentey.
 //
 
 // `bTreeNodeSize` is the maximum size (in bytes) of the keys in a single, fully loaded B-tree node.
@@ -27,6 +27,7 @@ internal let bTreeNodeSize = 16383
 /// A node in an in-memory B-tree data structure, efficiently mapping `Comparable` keys to arbitrary values.
 /// Iterating over the elements in a B-tree returns them in ascending order of their keys.
 internal final class BTreeNode<Key: Comparable, Value> {
+    typealias Iterator = BTreeIterator<Key, Value>
     typealias Element = Iterator.Element
     typealias Node = BTreeNode<Key, Value>
 
@@ -55,7 +56,7 @@ internal final class BTreeNode<Key: Comparable, Value> {
         self.children = children
         self.count = count
         self._depth = (children.count == 0 ? 0 : children[0]._depth + 1)
-        assert(children.index { $0._depth + 1 != self._depth } == nil)
+        assert(children.index { $0._depth + (1 as Int32) != self._depth } == nil)
     }
 }
 
@@ -131,8 +132,6 @@ extension BTreeNode {
 //MARK: Sequence
 
 extension BTreeNode: Sequence {
-    typealias Iterator = BTreeIterator<Key, Value>
-
     var isEmpty: Bool { return count == 0 }
 
     func makeIterator() -> Iterator {

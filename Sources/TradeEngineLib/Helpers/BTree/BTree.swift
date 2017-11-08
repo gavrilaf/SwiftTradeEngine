@@ -3,7 +3,7 @@
 //  BTree
 //
 //  Created by Károly Lőrentey on 2016-02-19.
-//  Copyright © 2015–2016 Károly Lőrentey.
+//  Copyright © 2015–2017 Károly Lőrentey.
 //
 
 /// B-trees are search trees that provide an ordered key-value store with excellent performance characteristics.
@@ -21,9 +21,15 @@ public struct BTree<Key: Comparable, Value> {
     }
 
     /// Initialize a new B-tree with no elements.
+    /// The order of the tree is set automatically based on the size of `Element` type.
+    public init() {
+        self.init(order: Node.defaultOrder)
+    }
+
+    /// Initialize a new B-tree with no elements.
     ///
     /// - Parameter order: The maximum number of children for tree nodes.
-    public init(order: Int = Node.defaultOrder) {
+    public init(order: Int) {
         self.root = Node(order: order)
     }
 

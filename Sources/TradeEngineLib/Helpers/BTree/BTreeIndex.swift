@@ -3,7 +3,7 @@
 //  BTree
 //
 //  Created by Károly Lőrentey on 2016-02-11.
-//  Copyright © 2015–2016 Károly Lőrentey.
+//  Copyright © 2015–2017 Károly Lőrentey.
 //
 
 /// An index into a collection that uses a B-tree for storage.
@@ -120,7 +120,7 @@ internal struct BTreeWeakPath<Key: Comparable, Value>: BTreePath {
         expectValid(_root.value === root)
     }
 
-    internal func expectValid(_ expression: @autoclosure (Void) -> Bool, file: StaticString = #file, line: UInt = #line) {
+    internal func expectValid(_ expression: @autoclosure () -> Bool, file: StaticString = #file, line: UInt = #line) {
         precondition(expression(), "Invalid BTreeIndex", file: file, line: line)
     }
 
